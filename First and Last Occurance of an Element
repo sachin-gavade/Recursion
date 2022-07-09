@@ -1,0 +1,29 @@
+public class Recursion2 {
+    public static int first = -1;
+    public static int last = -1;
+    public static void findOccurance(String str, int idx, char element) {
+
+        if(idx == str.length()) { // Base case
+            System.out.println(first);
+            System.out.println(last);
+            return;
+        }
+
+        char currChar = str.charAt(idx); // Current character which is equal to current index
+        if(currChar == element) { 
+            if(first == -1) {
+                first = idx; // Assigns first occurance
+            }
+            else {
+                last = idx; // Assigns last occurance
+            }
+        }
+
+        findOccurance(str, idx+1, element); // idx+1 = increamenting index
+    }
+
+    public static void main(String[] args) {
+        String str = "abaacdaefaah";
+        findOccurance(str, 0, 'a');
+    }
+}
