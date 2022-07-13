@@ -1,5 +1,5 @@
 public class Recursion2 {
-    public static boolean map[] = new boolean[26];
+    public static boolean map[] = new boolean[26]; //MAP ARRAY IS USED TO MAP ALL 26 ENGLISH ALPHABETS
 
     public static void removeDuplicate(String str, int idx, String newString) {
         if(idx == str.length()) {
