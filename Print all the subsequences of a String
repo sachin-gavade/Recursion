@@ -1,0 +1,21 @@
+public class Recursion2 {
+    public static void subsequences(String str, int idx, String newString) {
+        if(idx == str.length()) { // BASE CASE
+            System.out.println(newString);
+            return;
+        }
+
+        char currChar = str.charAt(idx);
+        //character to be in the string
+        subsequences(str, idx+1, newString+currChar);
+
+        //character not to be in the string
+        subsequences(str, idx+1, newString);
+        
+    }
+
+    public static void main(String[] args) {
+        String str = "abc";
+        subsequences(str, 0, "");
+    }
+}
