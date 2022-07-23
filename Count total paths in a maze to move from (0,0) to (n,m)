@@ -21,6 +21,8 @@ public class Recursion2 {
     public static void main(String[] args) {
         int n = 3;
         int m = 3; 
+        
+        //initially i and j are (0,0)
         int totalPaths = countPaths(0, 0, n, m);
         System.out.println(totalPaths);
     }
